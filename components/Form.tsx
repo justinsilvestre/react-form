@@ -50,7 +50,7 @@ export function useForm<Fields>({ initialFieldValues, validator }: {
         errors: state.fieldsTouched[fieldName] && errors ? errors : [],
         disabled: state.status === 'SUBMISSION_SUCCEEDED',
         onChange: (value: Fields[FieldName]) => {
-          const fieldValues = {...state.fields, [fieldName]: value}
+          const fieldValues = { ...state.fields, [fieldName]: value }
           dispatch({ type: 'SET_FIELD_VALUES', fieldValues, validationResult: validator(fieldValues) })
         },
         onBlur: () => dispatch({ type: 'TOUCH_FIELD', fieldName: fieldName as string })
@@ -97,7 +97,7 @@ function formReducer<F>(state: FormState<F>, action: FormAction<F>): FormState<F
         ...state,
         status: 'SUBMISSION_SUCCEEDED',
       }
-    case 'SUBMIT_FORM_FAILURE':{
+    case 'SUBMIT_FORM_FAILURE': {
       const fieldsTouched: FormState<F>['fieldsTouched'] = {}
       for (const name in state.fields) fieldsTouched[name] = true
 
@@ -122,7 +122,7 @@ function formReducer<F>(state: FormState<F>, action: FormAction<F>): FormState<F
           [action.fieldName]: true,
         }
       }
-    
+
     default:
       return state
   }

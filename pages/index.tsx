@@ -20,7 +20,7 @@ const IndexPage = () => {
 
   return (
     <Layout title="React form component">
-      <TextForm fields={FIELDS} onSubmit={handleSubmit}/>
+      <TextForm fields={FIELDS} onSubmit={handleSubmit} />
     </Layout>
   )
 }

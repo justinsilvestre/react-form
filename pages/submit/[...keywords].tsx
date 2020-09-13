@@ -21,15 +21,17 @@ function KeywordsPage({ color, fruit, name }: Props) {
   </Layout>
 }
 
-export const getServerSideProps : GetServerSideProps<Props> = async (context) => {
+export const getServerSideProps: GetServerSideProps<Props> = async (context) => {
 
   const [color, fruit, name] = context.params?.keywords || []
 
-  return { props: {
-    color: color || 'orange',
-    fruit: fruit || 'mango',
-    name: name || null,
-  } }
+  return {
+    props: {
+      color: color || 'orange',
+      fruit: fruit || 'mango',
+      name: name || null,
+    }
+  }
 }
 
 export default KeywordsPage
