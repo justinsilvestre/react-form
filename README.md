@@ -15,7 +15,7 @@ Your browser should then take you to http://localhost:3000.
 
 I've tried to strike a balance between **ease of use** and **extensibility** by splitting my solution into two parts: `TextForm` and `Form`.
 
-### An easy-as-pie `TextForm`
+### An easy-peasy `TextForm`
 
 I started with the `TextForm` component. I wanted this component to have a super simple API, so that
 someone could create a form just by providing a list of field names, labels, and optional validation specs.
@@ -26,7 +26,7 @@ This API wouldn't serve us well in the event of a change in requirements, like i
 field was displayed, or if we had to deal with input types besides just plain text.
 With this in mind, I made sure that the internals of `TextForm` were made up of modular, composable
 parts. I took care to clearly separate the visual elements from the field-updating logic.
-To tht end, I made sure neither was too coupled to simple plain text input.
+To that end, I made sure neither was too coupled to simple plain text input.
 
 ### Super-flexible `Form`
 
