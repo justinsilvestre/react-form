@@ -2,9 +2,10 @@ import Link from 'next/link'
 import Layout from '../components/Layout'
 
 const AboutPage = () => (
-  <Layout title="About | Next.js + TypeScript Example">
+  <Layout title="React form component">
     <h1>About</h1>
-    <p>This is the about page</p>
+    <p>Here's my solution.</p>
+    <p>Thanks for having a look!</p>
     <p>
       <Link href="/">
         <a>Go home</a>
